@@ -8,6 +8,6 @@ print(s)
 i=0
 for word in s:
     i+=1
-print("number of words = ",i)
+print("количество слов = ",i)
         
     
