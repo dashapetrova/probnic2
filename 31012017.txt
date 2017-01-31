@@ -1,0 +1,48 @@
+FRANCAIS
+salut, je m'appelle aicha, et toi
+moi, c'est bruno. dis, tu connais l'etudiant blonde, la bas
+le garcon,a cote de la porte,le grand. oui,il est tres sympa. et les deux filles aussi
+et la prof,tu la connais
+aussi oui, elle est belge, elle est tres amusante.eh regarde
+qui est-ce? c'est la prof?
+bonsoir, je me present... je suis madame Bernier.
+je suis votre professeur et je suis tres contente de vous connaitre.et vous, qui etes-vous?
+
+tu es content du prof
+bof il n'est pas mal
+excusez moi, je cherche jean martin. vous le connaissez?
+moi,non.et toi, bertrand?
+jean martin? mais oui,je le connais, et toi aussi.
+il travaille au secretariat. il est le secretaire du directeur.
+ah bon,c'est lui.eh ben il est a la cafeteria
+comment est-il,s'il vous plait?
+jeune,30 ans a peu pres.il est grande,chatain et il parle avec deux messieurs
+merci beaucoup,au revoir
+excusez-moi, vous etes jean martin?
+oui,oui,c'est moi
+bonjour,monsieur. vous avez un moment,s'il vous plait?
+mais oui mademoiselle.avevc plaisir
+
+CONSPECT
+true pythonists: if __name__=='__name__':main()
+csv-для структурированных данных(табличек, например)
+\t tsv
+for line in f:cells...
+//кодировки
+BOM-спец символ который говорит что все что дальше идет в utf-8
+inside [] - . is not . :[.] and \. . is not . [\-...-]если дефис в конце значит это не промежуток
+[^a-z] - все что угодно но не это
+.??
+.+?a  -  ?-ограничивает квантификатор
+
+if re.search(regex,s): print(...) //without ==true or !=none ?
+r=re.search(reges,s)
+if r:email=r.group()
+//regex='(...)..(...)' - две группы в скобках,логин и домен: первая и вторая группа, то что возьмется из regex при соответствии
+login=r.group(1) domen=r.group(2) //если не писать номер группы, возьмет все выражение
+((()())) нумеруются по первой открывающейся скобке
+//функция для множества вхождений: res=re.findall(regex,s) - его результат-массив строк (join-массив строку в одну строку)
+число вхождений-len(re.findall(r,s)) // если групп нет нормас
+res=[('..','..')] - массив кортежей res[0][0]-элемент
+скобки не запоминающие: (?:...)
+космическая программа китая
