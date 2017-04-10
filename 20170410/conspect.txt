@@ -1,0 +1,39 @@
+работа с файлами и папками
+os - операционная система: знает к какой системе работаем
+путь(директории папки как строка) файл в windows это /, в других |
+os может сформировать адрес как надо 
+folder+os.sep+folder 'папка1'+os.sep+'папка2'
+проблема обратного слеша \
+в одном папке много нужных файлов, все прочесть атата
+import os
+lst=os.listdir('.') /'.'-указание на ту папку, где лежит программа
+lst=['file.txt','file.py']
+for fl in lst: if fl.endswith('.txt'):f=open(fl) #открываем тхт
+если папка в другом месте:
+lst=os.listdir('C:/Users') - абслютный путь
+относительный путь относительно той папки где файл
+на уровень ниже ('папка2') на уровень выше('../папка3') #папка 3?
+pth='C:/Users/'
+lst=os.listdir(pth)
+как импортировать собственную программу:
+prog1.py (def func1(x,y): z=x+y return z)
+положить prog1.py в ту же папку где prog2.py
+import prog1
+print(prog1.func1(4,5))
+импортировать программу саму в себя import prog3.py в prog3.py #бесполезно но круто
+вложенные директории, можно ли извлечь все?  - можно (но потом)
+os.path.abspath('.') - получить аблосютный путь
+import os
+os.mkdir('nwdir')#создать папку/директорию
+os.path.exists('new_folder') #возвращает true или false
+import shutil
+shutil.copy('dir1/f.txt','dir2') # два одинаковых файла в разных папках
+shutil.move(...) # перемещение
+import os     os.rename('f.txt','myf.txt')
+os.path.isdir() и os.path.isfile() if os.path.isdir()/os.path.isfile():...
+if '':print('1') else:print(2) => false
+if 0:... => false
+os.remove() - для файла, os.rmdir() - для директории и shutil.rmtree() - для созданных в процессе работы папок
+
+
+
