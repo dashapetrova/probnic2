@@ -1,0 +1,33 @@
+os.walk('.') ('..\\')-на два уровня выше - относительные пути
+('C:\...') - абсолютный путь
+for root, dirs, files in os.walk('.'):
+    print(root)
+#enumerate-int+то что из массива
+root-str
+разные папки - разные итерации цикла
+root-в какой мы папке
+dirs-массив(вложенных папок или пустой)
+files-вложенные файлы
+os.path.join(root, f) - массив из пути и названия файла
+1) отдает три переменных всегда
+2) путь надо прописывать
+
+for root, dirs, files in os.walk('.', topdown=False):
+    print(root)
+чтобы ходить вниз
+
+задача 1:
+#shutil.rmtree()
+#которая удаляет выбранную папку со всеми папками и файлами внутри неё
+import os
+def de():
+    name=input("input name: ")
+    for root, dirs, files in os.walk('.'):
+        for d in dirs:
+            if d==name:
+                os.walk('.', topdown=False)
+                for f in files:
+                    files.remove(os.path.join(root,f))
+        print(root,dirs,files,sep="__")
+de()
+
