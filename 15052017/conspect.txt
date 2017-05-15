@@ -1,0 +1,23 @@
+выделение коллокаций
+https://github.com/ElizavetaKuzmenko/Programming-and-computer-instruments/blob/master/seminars/PMI.ipynb
+\r\n - перенос для блокнота, а не только \n (устаревший чутка)
+IPM
+split()(по пробелоподобным символам) vs split('')-по пробелам
+join - склеивать только элементы массива
+поэтому
+' '.join([words[ind - 1], words[ind]])
+a,b=4,5 можно
+вертолеты вжууууух - насчет первой строки в формуле - есть несоответствия
+закон ципра/цифра
+
+d={'a':1,'b':2}
+for k in sorted (d):
+print(k) по ключам(ключу)
+for bigram in sorted(pmi, key = lambda m: -pmi[m]): - по значениям в обратном порядке - ВОЛШЕБНАЯ ЛЯМБДА
+без минуса - от меньшего к большему
+pmi на words - для другой программы
+for k in sorted(d, key= )
+cats - категории
+try except - опасные, т.к. могут скрывать ошибки
+try:...
+except: print('Error') - вместо try если в try ошибка - ловим ошибки
