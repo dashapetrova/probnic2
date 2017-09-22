@@ -1,27 +1,23 @@
 import urllib.request
+import re
 
-def download_page(pageUrl):
-    try:
-        page = urllib.request.urlopen(pageUrl)
-        print(page.geturl()) #итоговый url после переадресации
-        text = page.read().decode('ISO-8859-1')
-    except:
-        print('Error at', pageUrl)
-        return
-    # do something with the downloaded text
+req = urllib.request.Request('http://pav-edin23.ru/category/obrazovanie/')
+with urllib.request.urlopen(req) as response:
+   html = response.read().decode('utf-8')
 
-commonUrl = 'http://www.forumishqiptar.com/threads/'
-for i in range(160400, 160425):
-    pageUrl = commonUrl + str(i)
-    download_page(pageUrl)
+regPostTitle = re.compile('<h2 class="entry-title">.*?</h2>', flags= re.DOTALL)
+titles = regPostTitle.findall(html)
 
-html_content = '<html>....</html>'  # тут какой-то html
+new_titles = []
+regTag = re.compile('<.*?>', re.DOTALL)
+regSpace = re.compile('\s{2,}', re.DOTALL)
+for t in titles:
+    clean_t = regSpace.sub("", t)
+    clean_t = regTag.sub("", clean_t)
+    new_titles.append(clean_t)
+    
+f = open('result.txt', 'w', encoding = "utf-8")
+for i in range(len(new_titles)):
+    f.write(new_titles[i]+'\n')
+f.close()
 
-regTag = re.compile('<.*?>', flags=re.U | re.DOTALL)  # это рег. выражение находит все тэги
-regScript = re.compile('<script>.*?</script>', flags=re.U | re.DOTALL) # все скрипты
-regComment = re.compile('<!--.*?-->', flags=re.U | re.DOTALL)  # все комментарии
-
-# а дальше заменяем ненужные куски на пустую строку
-clean_t = regScript.sub("", t)
-clean_t = regComment.sub("", clean_t)
-clean_t = regTag.sub("", clean_t)
