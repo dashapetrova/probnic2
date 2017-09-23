@@ -1,0 +1,13 @@
+морфологический анализатор от яндекса
+
+запустить cmd
+перейти в папку с mystem.exe
+mystem text.txt out.txt
+
+mystem в питоне
+
+import os
+inp = r'C:\Users\student'
+lst = os.listdir(inp)
+for fl in lst:
+    os.system(r'C:\Users\student\mystem.exe'+inp+os.sep+fl+"output_texts"+os.sep+fl)
