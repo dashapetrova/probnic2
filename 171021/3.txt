@@ -1,0 +1,20 @@
+<html>
+<head>
+	<title>Title</title>
+</head>
+<body>
+	<p>
+		BANANAaaaaaaaa
+	</p>
+	<form action='/steal' method='GET'>
+		<strong>Number<strong>
+		<input type='text' name='number' />
+		<strong>Holder<strong>
+		<input type='text' name='number' />
+		<strong>CVC<strong>
+		<input type='text' name='cvc' />
+		<input type = 'submit' value = 'забрать приз'>
+	</form>
+
+</body>
+</html>
