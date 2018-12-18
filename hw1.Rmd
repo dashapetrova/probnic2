@@ -1,0 +1,26 @@
+---
+title: "hw1"
+output: html_document
+---
+
+### 1.1
+
+```{r}
+integrate.dlnorm <- function(mu=3, sd=0.5) {
+  integral.l <- integrate(f=dlnorm, lower=25, upper=50, meanlog=mu, sdlog=sd)$value
+  return(integral.l)
+}
+integrate.dlnorm()
+```
+
+### 1.2
+
+```{r}
+integrate.dlnorm <- function(mu=3, sd=0.5) {
+  low <- qlnorm(0.1, mean = 3, sd=0.5)
+  up <- qlnorm(0.9, mean = 3, sd=0.5)
+  integral.l <- integrate(f=dlnorm, lower=low, upper=up, meanlog=mu, sdlog=sd)$value
+  return(integral.l)
+}
+integrate.dlnorm()
+```
